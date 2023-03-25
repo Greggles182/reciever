@@ -19,4 +19,6 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 radio.setGroup(1)
 serial.redirectToUSB()
+serial.setBaudRate(BaudRate.BaudRate115200)
+serial.writeLine("Started!")
 basic.showString("Started!")
