@@ -19,7 +19,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 serial.onDataReceived("1", function () {
     basic.showIcon(IconNames.Yes)
-    radio.sendNumber(0)
+    radio.sendNumber(3)
     music.playMelody("C5 G B A F A C5 B ", 200)
     basic.showLeds(`
         . . . . .
