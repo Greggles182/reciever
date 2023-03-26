@@ -17,6 +17,18 @@ radio.onReceivedNumber(function (receivedNumber) {
         . . . . .
         `)
 })
+serial.onDataReceived("1", function () {
+    basic.showIcon(IconNames.Yes)
+    radio.sendNumber(0)
+    music.playMelody("C5 G B A F A C5 B ", 200)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+})
 radio.setGroup(1)
 serial.redirectToUSB()
 serial.setBaudRate(BaudRate.BaudRate115200)
